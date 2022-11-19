@@ -1,0 +1,14 @@
+<div class="card product-card mb-4" routerLink="product/{{ product.id }}">
+    <img [src]="product.image" class="card-img-top" [alt]="product.title">
+    <div class="card-body p-0">
+      <h3 class="card-title mb-2">{{product.title | slice:0:20}} ...</h3>
+      <h3 class="card-price mb-2">{{product.price | currency : 'USD': 'symbol' }}</h3>
+      <p class="card-text">{{product.description | slice:0:80 }} ...</p>
+      <ngb-rating [max]="5" [(rate)]="product.rating.rate" [readonly]="true"></ngb-rating>
+      <a routerLink="product/{{ product.id }}" class="btn btn-fav float-end">
+        <img src="../../../assets/heart.svg">
+        Watch
+    </a>
+    </div>
+</div>
+

@@ -1,0 +1,30 @@
+<div class="login-content">
+    <div class="row align-items-center text-center">
+        <div class="col-md-6">
+            <img [src]="loginImage" class="img-fluid">
+        </div>
+        <div class="col-md-4 offset-md-1">
+            <h1><span>You</span>topia</h1>
+            <button type="button" class="login-with-google-btn" >
+                <img [src]="iconGoogle">
+                <span class="ms-4">Login through Google</span>
+              </button>
+              <h2 class="background"><span>or</span></h2>
+              <form>
+                <div class="text-start">
+                    <label for="Email" class="form-label">Email*</label>
+                    <input type="email" class="form-control" id="Email" [(ngModel)]="username" name="username" required autocomplete="off">
+                </div>
+                <div class="text-start">
+                    <label for="password" class="form-label">Password*</label>
+                    <input type="password" class="form-control" id="password"  [(ngModel)]="password" name="password" required autocomplete="off">
+                    <label class="">Forgot your <a>Password?</a></label>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-submit" (click)="login()">Login</button>
+                </div>                
+              </form>
+              
+        </div>
+    </div>
+</div>

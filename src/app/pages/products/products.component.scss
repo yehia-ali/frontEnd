@@ -1,0 +1,43 @@
+.card-container {
+    box-shadow: 0px 1px 2px rgba(58, 58, 68, 0.24), 0px 2px 4px rgba(90, 91, 106, 0.24);
+    border-radius: 8px;
+    padding: 16px 16px 62px 16px;
+    margin-bottom: 50px;
+}
+.filter {
+    margin-bottom: 20px;
+    .accordion-item {
+        background: #F7F7FA;
+        border-radius: 4px
+    }
+    .accordion-button {
+        background: transparent;
+        box-shadow: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.022em;
+        color: #19191D;
+        padding: 8px 12px 0;
+        &:not(.collapsed)::after {
+            background-image: url(../../../assets/arrow.svg);
+            transform:none;
+            background-size: contain;
+            height: 10px;
+        }
+    }
+    .accordion-body {
+        padding: 25px 19px;
+    }
+    .form-check-input {
+        border: 2px solid #4A4B57;
+    }
+    label {
+        margin-left: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.022em;
+        color: #19191D;
+    }
+}

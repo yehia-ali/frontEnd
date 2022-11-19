@@ -1,0 +1,72 @@
+.product-card {
+    border: none;
+    padding: 16px;
+    transition: all 0.5s;
+    &:hover {
+        box-shadow: 0px 2px 15px rgba(59, 69, 123, 0.2), 0px 4px 8px rgba(92, 107, 192, 0.2);
+        border-radius: 8px;
+    }
+    img {
+        &.card-img-top {
+            height: 200px;
+            margin-bottom: 12px;
+        }
+    }
+
+    h3 {
+        font-family: 'Inter';
+        font-style: normal;
+        line-height: 150%;
+
+        &.card-title {
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.0275em;
+            color: #19191D;
+        }
+
+        &.card-price {
+            font-weight: 700;
+            font-size: 24px;
+            color: rgba(0, 0, 0, 0.87);
+        }
+    }
+    p {
+        &.card-text {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+            letter-spacing: 0.018em;
+            color: #787885;
+        }
+    }
+    .btn-fav {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        letter-spacing: 0.018em;
+        color: #2264D1;
+        background: #FFFFFF;
+        border: 1px solid #9DC2FF;
+        border-radius: 4px;
+    }
+    .Stars {
+        --percent: calc(var(--rating) / 5 * 100%);
+        
+        display: inline-block;
+        font-size: 15px;
+        font-family: Times; // make sure ★ appears correctly
+        line-height: 1;
+        
+        &::before {
+          content: '★★★★★';
+          letter-spacing: 3px;
+          background: linear-gradient(90deg,#FB8200 var(--percent), #fff var(--percent));
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      
+      
+}

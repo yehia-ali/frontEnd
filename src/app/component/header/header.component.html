@@ -1,0 +1,54 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/">
+        <img [src]="iconLogo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 right-menu">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active">Sell on Shopka</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/login" routerLinkActive="active">Register</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0 center-menu align-items-center">
+          <li class="nav-item">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1">
+                <img [src]="iconSearch">
+              </span>
+              <input type="text" class="form-control"  #searchInput (keyup)="searchProduct($event)" placeholder="Search By Product Title">
+            </div>
+          </li>
+          <li class="nav-item">
+            <p class="m-0">Consumer Electronics</p>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 left-menu">
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-primary" routerLink="/login">Sign in</button>
+          </li> 
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-primary position-relative">
+              My cart
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{totalItem}}
+              </span>          
+            </button>
+
+          </li> 
+          <li class="nav-item">
+            <img [src]="iconUser" (click)="logout()">
+          </li> 
+  
+        </ul>
+  
+      </div>
+    </div>
+  </nav>
+</header>

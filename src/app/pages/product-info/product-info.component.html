@@ -1,0 +1,56 @@
+<app-loader *ngIf="!Product"></app-loader>
+<div class="product-info" *ngIf="Product">
+    <div class="bg-product d-none d-xl-block" style="background-image: url({{Product.image}});"></div>
+
+    <div class="container"> 
+        <div class="row position-relative vh-75">
+            <div class="col-xl-7">
+                <a class="back-button" routerLink="/"><img [src]="iconBack">back to list</a>
+            </div>
+            <div class="col-xl-5">
+                <div class="product-details">
+                    <span class="badge text-bg-danger mb-2">HOTSALE</span>
+                    <img class="img-fluid mb-2 d-block d-xl-none" [src]="Product.image" [alt]="Product.title">
+                    <h2 class="mb-2">{{Product.title}}</h2>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">{{Product.category}} |</li>
+                        <li class="list-inline-item">
+                            <ngb-rating [max]="5" [(rate)]="Product.rating.rate" [readonly]="true"></ngb-rating> |
+                        </li>
+                        <li class="list-inline-item">{{Product.rating.rate}} ({{Product.rating.count}} reviews)</li>
+                      </ul>
+                    <p>Description:</p>
+                    <ul>
+                        <li>{{Product.description}} </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row position-relative">
+            <div class="addToCart">
+                <div class="row align-items-center">
+                    <div class="col-xl-1 col-3">
+                        <img class="prodcut-image" [src]="Product.image" [alt]="Product.title"/>
+                    </div>
+                    <div class="col-xl-6 col-9">
+                        <h5 class="mb-2">{{Product.title}}</h5>
+                        <p class="product-category">{{Product.category}}</p>
+                    </div>
+                    <div class="col-xl-2 col-6">
+                        <div class="number">
+                            <span class="minus" (click)="removeItem(Product)">-</span>
+                            <input type="text" value="1"/>
+                            <span class="plus" (click)="addtocart(Product)">+</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-6">
+                        <button type="button" class="btn btn-primary" (click)="addtocart(Product)">ADD TO CARD</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+  </div>
