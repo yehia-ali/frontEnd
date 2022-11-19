@@ -12,7 +12,6 @@ const routes: Routes = [
   { path: 'product', component: ProductsComponent, data: {title: 'Products'} },
   { path: 'product/:id', component: ProductInfoComponent,data: {title: 'Product' }},
   { path: 'login', component: LoginComponent,data: {title: 'login' }},
-  // { path: '**', component:NotFoundComponent,data: {title: 'Not Found' } }
 
 ];
 
